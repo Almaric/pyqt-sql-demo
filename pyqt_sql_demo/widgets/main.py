@@ -1,4 +1,5 @@
 from PyQt5.Qt import QMainWindow, QTabWidget, QAction
+# QtGui, QtWidgets
 
 from pyqt_sql_demo.widgets.connection import ConnectionWidget
 
@@ -50,3 +51,28 @@ class MainWindow(QMainWindow):
         idx = self.tab_widget.indexOf(widget)
         if idx != -1:
             self.tab_widget.setTabText(idx, name)
+
+
+
+    # OK / Good for TV/ww
+    def contextMenuEvent(self, event):
+        trigramme = "me"
+        # selected_items = self.tableView.selectedItems()
+        # print('selected_items', selected_items)
+        index = self.tab_widget.currentIndex()
+        print(index)
+        # newIndex  = index.siblingAtColumn(0)
+        # print(f'{trigramme}.contextMenuEvent() index:row' + str(index.row()) + ', col:' + str(index.column()))
+
+        # self.menu = QtWidgets.QMenu(self)
+
+        # self.menu.setStyleSheet("QMenu::separator {background: red}")
+
+        # if 0:
+        #     renameAction = QtGui.QAction('Rename', self)
+        #     # renameAction.triggered.connect(lambda: self.renameSlot(event))
+        #     self.menu.addAction(renameAction)
+        #     # add other required actions
+
+        # pos = QtGui.QCursor.pos()
+        # self.menu.popup(QtGui.QCursor.pos())
